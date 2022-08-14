@@ -11,7 +11,12 @@
         //  write a program that replace the email in a text with ****
         let myText = prompt("Enter any text that contains email and watch my program replace it with ****: ");
 
-        alert(myText.replaceAll(/(\w+[?=\@]\w+\.\w+)/gim, "****"));
+        alert(myText.replaceAll(/\w+[?=\@]\w+\.\w+(\.\w+)?/gim, "****"));
+
+        /* this pattern can catch emails like 
+        - nwokporochukwuebuka@gmail.com
+        - nwokporochukwuebuka@gmail.co.uk   In this last example the .uk is an optional addition
+        */
     </script>
 </body>
 </html>
